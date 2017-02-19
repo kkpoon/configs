@@ -48,7 +48,7 @@ map <C-n> :NERDTreeToggle<CR>
 
 let g:vim_json_syntax_conceal = 0
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
+"let g:airline_powerline_fonts = 1
 let g:elm_format_autosave = 1
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
