@@ -95,4 +95,5 @@ fi
 export PATH="$HOME/.yarn/bin:$PATH"
 
 # OPAM configuration
-. /Users/kkpoon/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+. $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+eval `opam config env`
