@@ -23,11 +23,7 @@ Plugin 'vim-syntastic/syntastic'
 
 " language
 Plugin 'fatih/vim-go'
-Plugin 'isRuslan/vim-es6'
-Plugin 'leafgarland/typescript-vim'
 Plugin 'elmcast/elm-vim'
-Plugin 'rust-lang/rust.vim'
-Plugin 'cespare/vim-toml'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
