@@ -28,6 +28,9 @@ Plugin 'fatih/vim-go'
 Plugin 'elmcast/elm-vim'
 Plugin 'rust-lang/rust.vim'
 
+" theme
+Plugin 'arcticicestudio/nord-vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -77,7 +80,6 @@ syntax on
 set encoding=utf8
 set hlsearch
 
-"colorscheme default
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -99,3 +101,4 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+colorscheme nord
