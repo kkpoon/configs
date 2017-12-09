@@ -24,7 +24,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-syntastic/syntastic'
 
 " languages
-Plugin 'fatih/vim-go'
+Plugin 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plugin 'elmcast/elm-vim'
 Plugin 'rust-lang/rust.vim'
 
@@ -64,7 +64,9 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 
 " language go
-let g:go_fmt_command = "goimport"
+let g:go_fmt_command = "goimports"
+let g:go_metalinter_autosave = 1
+let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
 
 " language elm
 let g:elm_format_autosave = 1
