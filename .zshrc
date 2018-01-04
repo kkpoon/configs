@@ -1,4 +1,4 @@
-source $HOME/.antigen/antigen.zsh
+source $HOME/.antigen/antigen/antigen.zsh
 
 antigen use oh-my-zsh
 

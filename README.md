@@ -6,5 +6,6 @@ The zsh is managed by [antigen](https://github.com/zsh-users/antigen). You have 
 
 ```shell
 mkdir .antigen
-curl -L git.io/antigen > .antigen/antigen.zsh
+cd .antigen
+git clone https://github.com/zsh-users/antigen.git
 ```
