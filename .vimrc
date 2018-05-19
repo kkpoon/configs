@@ -27,6 +27,7 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plugin 'elmcast/elm-vim'
 Plugin 'rust-lang/rust.vim'
+Plugin 'prettier/vim-prettier', { 'do': 'npm install' }
 
 " theme
 Plugin 'arcticicestudio/nord-vim'
@@ -75,6 +76,9 @@ let g:elm_syntastic_show_warnings = 1
 " language rust
 let g:rustfmt_autosave = 1
 let g:syntastic_rust_checkers = ['cargo']
+
+" prettier
+let g:prettier#config#tab_width = 4
 
 filetype on
 syntax on
