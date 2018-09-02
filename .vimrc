@@ -22,6 +22,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'mhinz/vim-signify'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'w0rp/ale'
 
 " languages
 Plugin 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
