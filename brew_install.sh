@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# shell
+brew install fish
+
 # git
 brew install git hub
 
