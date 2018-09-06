@@ -1,6 +1,0 @@
-# This is a sample of .profile
-
-alias ls="exa"
-alias ll="exa -la --git"
-
-# export the PATH and other environment variables for your user profile
