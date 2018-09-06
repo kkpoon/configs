@@ -15,6 +15,12 @@ antigen theme miloshadzic
 # done
 antigen apply
 
+if type exa > /dev/null; then
+    alias ls="exa"
+    alias ll="exa -l"
+    alias lll="exa -la --git"
+fi
+
 # source .profile
 if [ -f ~/.profile ]; then
     source ~/.profile
