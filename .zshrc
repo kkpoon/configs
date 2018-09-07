@@ -21,6 +21,10 @@ if type exa > /dev/null; then
     alias lll="exa -la --git"
 fi
 
+if type thefuck > /dev/null; then
+    eval $(thefuck --alias hihi)
+fi
+
 # source .profile
 if [ -f ~/.profile ]; then
     source ~/.profile

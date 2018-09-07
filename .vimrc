@@ -1,40 +1,34 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
 " features
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'elzr/vim-json'
-Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'rhysd/github-complete.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'tpope/vim-fugitive'
-Plugin 'mhinz/vim-signify'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'w0rp/ale'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'rhysd/github-complete.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-fugitive'
+Plug 'mhinz/vim-signify'
+Plug 'vim-syntastic/syntastic'
+Plug 'w0rp/ale'
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 
-" languages
-Plugin 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-Plugin 'elmcast/elm-vim'
-Plugin 'rust-lang/rust.vim'
-Plugin 'prettier/vim-prettier', { 'do': 'npm install' }
+" languages and file types
+Plug 'elzr/vim-json'
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plug 'elmcast/elm-vim'
+Plug 'rust-lang/rust.vim'
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 
 " theme
-Plugin 'arcticicestudio/nord-vim'
+Plug 'arcticicestudio/nord-vim'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
+call plug#end()
+
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -48,6 +42,9 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 map <C-n> :NERDTreeToggle<CR>
+" open fzf
+map <C-p> :Files<CR>
+nmap <C-\> :Buffers<CR>
 
 let g:vim_json_syntax_conceal = 0
 let g:airline#extensions#tabline#enabled = 1
@@ -59,11 +56,6 @@ let g:syntastic_check_on_wq = 0
 
 " vcs visualize
 let g:signify_vcs_list = [ 'git', 'hg' ]
-
-" ctrlp CTRL-P
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'ra'
 
 " language go
 let g:go_fmt_command = "goimports"

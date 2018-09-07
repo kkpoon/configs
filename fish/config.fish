@@ -9,7 +9,7 @@ if type -q exa
 end
 
 if type -q thefuck
-    thefuck --alias gg | source
+    thefuck --alias hihi | source
 end
 
 if [ -f ~/.profile ]

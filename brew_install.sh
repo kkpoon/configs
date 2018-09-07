@@ -8,3 +8,6 @@ brew install git hub
 
 # better terminal
 brew install exa bat
+
+# tools
+brew install fzf
