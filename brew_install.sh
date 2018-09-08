@@ -10,4 +10,4 @@ brew install git hub
 brew install exa bat
 
 # tools
-brew install fzf
+brew install nvim fzf
