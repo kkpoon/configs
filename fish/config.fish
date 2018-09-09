@@ -1,5 +1,5 @@
-function fish_greeting
-end
+# mute the greeting
+set fish_greeting
 
 # use exa instead of ls
 if type -q exa
