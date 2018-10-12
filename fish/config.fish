@@ -6,6 +6,7 @@ if type -q exa
     alias ls="exa"
     alias ll="exa -l"
     alias lll="exa -la --git"
+    alias vimf="vim -p (fzf -m)"
 end
 
 if type -q thefuck
