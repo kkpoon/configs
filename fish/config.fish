@@ -1,6 +1,5 @@
 set -g theme_date_format "+%H:%M"
 set -g theme_color_scheme terminal-dark
-set -g theme_powerline_fonts no
 
 # mute the greeting
 set fish_greeting
