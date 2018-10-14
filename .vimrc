@@ -87,6 +87,8 @@ set autoindent
 set smartindent
 
 set showtabline=2
+set colorcolumn=80
+set showcmd
 "set mouse=a
 
 "highlight OverLength ctermbg=red ctermfg=white guibg=#592929
