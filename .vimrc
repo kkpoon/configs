@@ -49,10 +49,6 @@ nmap <C-\> :Buffers<CR>
 let g:vim_json_syntax_conceal = 0
 let g:airline#extensions#tabline#enabled = 1
 "let g:airline_powerline_fonts = 1
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
 
 " vcs visualize
 let g:signify_vcs_list = [ 'git', 'hg' ]
@@ -97,6 +93,13 @@ set showcmd
 set exrc
 set secure
 set laststatus=2
+
+" syntastic
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_mode_map = { 'passive_filetypes': ['python'] }
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
