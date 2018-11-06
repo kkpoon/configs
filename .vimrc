@@ -69,6 +69,12 @@ let g:syntastic_rust_checkers = ['cargo']
 " prettier
 let g:prettier#config#tab_width = 4
 
+let g:ale_fixers = {
+\   'javascript': ['prettier'],
+\   'css': ['prettier'],
+\}
+let g:ale_fix_on_save = 1
+
 filetype on
 syntax on
 
@@ -97,7 +103,7 @@ set laststatus=2
 " syntastic
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_open = 1 
 let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = { 'passive_filetypes': ['python'] }
 
