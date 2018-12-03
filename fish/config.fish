@@ -12,10 +12,6 @@ if type -q exa
     alias vimf="vim -p (fzf -m)"
 end
 
-if type -q thefuck
-    thefuck --alias hihi | source
-end
-
 if [ -f ~/.profile ]
     source ~/.profile
 end
