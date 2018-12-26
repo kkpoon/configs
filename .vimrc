@@ -7,6 +7,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
+Plug 'majutsushi/tagbar'
 Plug 'rhysd/github-complete.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -42,6 +43,7 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 map <C-n> :NERDTreeToggle<CR>
+nmap <C-b> :TagbarToggle<CR>
 " open fzf
 map <C-p> :Files<CR>
 nmap <C-\> :Buffers<CR>

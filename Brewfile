@@ -6,4 +6,5 @@ brew "bat"
 brew "nvim"
 brew "fzf"
 brew "watch"
+brew "ctags"
 
