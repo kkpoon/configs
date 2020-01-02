@@ -1,12 +1,10 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
 call plug#begin('~/.vim/plugged')
 
 " features
 Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'majutsushi/tagbar'
 Plug 'rhysd/github-complete.vim'
 Plug 'vim-airline/vim-airline'
@@ -14,7 +12,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
 Plug 'vim-syntastic/syntastic'
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 
@@ -30,27 +28,90 @@ Plug 'arcticicestudio/nord-vim'
 
 call plug#end()
 
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" General Settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set history=500
+
+filetype on
+syntax on
+
+set autoread
+au FocusGained,BufEnter * checktime
+
+set ruler
+
+set hid
+
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
+
+set encoding=utf8
+set ffs=unix,dos,mac
+
+" searching
+set hlsearch
+set incsearch
+
+set showmatch
+set mat=2
+
+" Indent and tab
+set expandtab
+set smarttab
+
+set shiftwidth=4
+set tabstop=4
+
+set autoindent
+set smartindent
+set wrap
+
+set showtabline=2
+set colorcolumn=80
+set showcmd
+set number
+set mouse=a
+set clipboard=unnamed
+
+set laststatus=2
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+set exrc
+set secure
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Colour
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+try
+    colorscheme nord
+catch
+endtry
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Set key mapping
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <C-n> :NERDTreeToggle<CR>
-nmap <C-b> :TagbarToggle<CR>
+nmap <F8> :TagbarToggle<CR>
 " open fzf
 map <C-p> :Files<CR>
 nmap <C-\> :Buffers<CR>
 
-let g:vim_json_syntax_conceal = 0
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugin Settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:airline#extensions#tabline#enabled = 1
 "let g:airline_powerline_fonts = 1
+
+let g:NERDTreeShowHidden = 1
+
+let g:vim_json_syntax_conceal = 0
 
 " vcs visualize
 let g:signify_vcs_list = [ 'git', 'hg' ]
@@ -72,47 +133,17 @@ let g:syntastic_rust_checkers = ['cargo']
 let g:prettier#config#tab_width = 4
 
 let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['prettier'],
 \   'css': ['prettier'],
 \}
 let g:ale_fix_on_save = 1
-
-filetype on
-syntax on
-
-set encoding=utf8
-set hlsearch
-
-set tabstop=4
-set shiftwidth=4
-set expandtab
-
-set autoindent
-set smartindent
-
-set showtabline=2
-set colorcolumn=80
-set showcmd
-set number
-set mouse=a
-set clipboard=unnamed
-
-"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-"match OverLength /\%81v.\+/
-
-set exrc
-set secure
-set laststatus=2
+let g:ale_completion_enabled = 1
+set omnifunc=ale#completion#OmniFunc
 
 " syntastic
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1 
+let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = { 'passive_filetypes': ['python'] }
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-colorscheme nord
