@@ -15,6 +15,7 @@ Plug 'vim-syntastic/syntastic'
 Plug 'dense-analysis/ale'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'vim-scripts/loremipsum'
 
 " languages and file types
 Plug 'elzr/vim-json'
@@ -22,6 +23,8 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'elmcast/elm-vim'
 Plug 'rust-lang/rust.vim'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+Plug 'leafgarland/typescript-vim'
+Plug 'Quramy/tsuquyomi'
 
 " theme
 Plug 'arcticicestudio/nord-vim'
@@ -67,6 +70,7 @@ set tabstop=4
 set autoindent
 set smartindent
 set wrap
+set completeopt+=noinsert
 
 set showtabline=2
 set colorcolumn=80

@@ -24,6 +24,5 @@ if [ -f ~/.profile ]
     source ~/.profile
 end
 
-set -gx WASMTIME_HOME "$HOME/.wasmtime"
+starship init fish | source
 
-string match -r ".wasmtime" "$PATH" > /dev/null; or set -gx PATH "$WASMTIME_HOME/bin" $PATH

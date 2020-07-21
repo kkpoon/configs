@@ -1,4 +1,5 @@
 brew "fish"
+brew "starship"
 brew "git"
 brew "hub"
 brew "exa"
