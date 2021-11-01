@@ -10,6 +10,7 @@ Plug 'rhysd/github-complete.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-abolish'
 Plug 'mhinz/vim-signify'
 Plug 'vim-syntastic/syntastic'
 Plug 'dense-analysis/ale'
@@ -18,10 +19,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'vim-scripts/loremipsum'
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
 " languages and file types
@@ -82,6 +79,7 @@ set completeopt+=noinsert
 set showtabline=2
 set colorcolumn=80
 set showcmd
+set relativenumber
 set number
 set mouse=a
 set clipboard=unnamed
@@ -112,7 +110,6 @@ nmap <F8> :TagbarToggle<CR>
 " open fzf
 map <C-p> :Files<CR>
 nmap <C-\> :Buffers<CR>
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin Settings
