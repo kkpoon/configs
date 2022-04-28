@@ -1,31 +1,44 @@
 call plug#begin('~/.vim/plugged')
 
-" features
-Plug 'editorconfig/editorconfig-vim'
+" layout
 Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'majutsushi/tagbar'
-Plug 'rhysd/github-complete.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'tpope/vim-fugitive'
+
+" helpers
 Plug 'tpope/vim-abolish'
-Plug 'mhinz/vim-signify'
-Plug 'vim-syntastic/syntastic'
-Plug 'dense-analysis/ale'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'vim-scripts/loremipsum'
+
+" version control
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tpope/vim-fugitive'
+Plug 'mhinz/vim-signify'
+Plug 'rhysd/github-complete.vim'
+
+" features
+Plug 'vim-syntastic/syntastic'
+Plug 'dense-analysis/ale'
+
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 endif
 
 " languages and file types
+Plug 'editorconfig/editorconfig-vim'
 Plug 'elzr/vim-json'
+
+" go
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-Plug 'elmcast/elm-vim'
+
+" elm
+"Plug 'elmcast/elm-vim'
+
+" rust
 Plug 'rust-lang/rust.vim'
+
+" javascript / typescript
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/tsuquyomi'
@@ -79,10 +92,10 @@ set completeopt+=noinsert
 set showtabline=2
 set colorcolumn=80
 set showcmd
-set relativenumber
+"set relativenumber
 set number
 set mouse=a
-set clipboard=unnamed
+"set clipboard=unnamed
 
 set laststatus=2
 
